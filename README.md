@@ -25,5 +25,3 @@ This is a full-stack food ordering and canteen management system built using Htm
 
 ---
 
-## 📂 Project Structure
-
