@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Menu Items</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="menu-items.css" />
+</head>
+<body>
+  <div class="grid-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <div class="header-left">
+        <span class="material-icons-outlined">search</span>
+      </div>
+      <div class="header-right">
+        <span class="material-icons-outlined">notifications</span>
+        <span class="material-icons-outlined">email</span>
+        <span class="material-icons-outlined">account_circle</span>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand"> <span class="material-icons-outlined">restaurant</span> Admin Panel </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item"><a href="dashboard.html"><span class="material-icons-outlined">dashboard</span> Dashboard</a></li> 
+        <li class="sidebar-list-item"><a href=#><span class="material-icons-outlined">restaurant_menu</span> Menu Items</a></li>
+        <!--<li class="sidebar-list-item"><a href="orders.html"><span class="material-icons-outlined">shopping_cart</span> Orders</a></li> -->
+      </ul>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">MANAGE MENU ITEMS</p>
+        <button class="btn" onclick="showAddForm()">+ Add New Item</button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Item Name</th>
+              <th>Category</th>
+              <th>Price (₹)</th>
+              <th>Stock</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="menu-items-table">
+            <!-- Dynamically loaded with JS -->
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <!-- Add/Edit Form Modal -->
+  <div class="modal" id="item-form-modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeForm()">&times;</span>
+      <h3 id="form-title">Add Menu Item</h3>
+      <form id="item-form">
+        <input type="hidden" id="item-id">
+        <label for="name">Item Name:</label>
+        <input type="text" id="name" required>
+        <label for="category">Category:</label>
+        <select id="category" required>
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Snacks</option>
+        </select>
+        <label for="price">Price (₹):</label>
+        <input type="number" id="price" required>
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" required>
+        <button type="submit">Save Item</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="menu-items.js"></script>
+</body>
+</html>

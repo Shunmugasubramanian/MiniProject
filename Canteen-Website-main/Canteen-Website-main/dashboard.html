@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+
+  <!-- Google Fonts and Material Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="grid-container">
+
+    <!-- ===== Header ===== -->
+    <header class="header">
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <div class="header-left">
+        <span class="material-icons-outlined">search</span>
+      </div>
+      <div class="header-right">
+        <span class="material-icons-outlined">notifications</span>
+        <span class="material-icons-outlined">email</span>
+        <span class="material-icons-outlined">account_circle</span>
+      </div>
+    </header>
+
+    <!-- ===== Sidebar ===== -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+          <span class="material-icons-outlined">admin_panel_settings</span> Admin Panel
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item">
+          <a href="#"><span class="material-icons-outlined">dashboard</span> Dashboard</a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="menu-items.html"><span class="material-icons-outlined">restaurant_menu</span> Menu Items</a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="#"><span class="material-icons-outlined">shopping_cart</span> Orders</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- ===== Main Content ===== -->
+    <main class="main-container">
+
+      <!-- Main Title -->
+      <div class="main-title">
+        <p class="font-weight-bold">DASHBOARD</p>
+      </div>
+
+      <!-- Recent Orders Table -->
+      <div class="orders-section">
+        <h3>Recent Orders</h3>
+        <p><strong>Verification ID:</strong><span id="verification-id"></span></p>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Item Name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="order-table-body">
+            <!-- Data will be dynamically inserted here -->
+          </tbody>
+        </table>\
+        <p><strong>Total Amount:</strong> <span id="total-amount"></span></p>
+      </div>
+    </main>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>

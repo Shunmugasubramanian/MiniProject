@@ -1,0 +1,466 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <title>Canteen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="./resources/Yellow Abstract Cooking Fire Free Logo.png" />
+</head>
+
+<body>
+
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <img src="logo-wide.jpg">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#food">Services</a></li>
+                <li><a href="#food-menu">Menu</a></li>
+                <li><a href="#button">Order</a></li>
+            </ul>
+        </div>
+        <div class="light_dark">
+            <img src="moon-icon.png" alt="" id="icon">
+        </div>
+    </nav>
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+            <h1 class="main-title" id="home"> College Canteen</h1>
+            <p class="head2">Eat Well for a Healthy Life</p>
+            <a href="#food-menu" class="btn btn-primary">Menu</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-wrapper container">
+            <div class="about-text">
+                <p class="small">About Us</p>
+                <hr>
+                <h2>We've successfully maintained a nutritious diet for several years.</h2>
+                <hr>
+                <p class="small">
+                    The college canteen is more than just a place to grab a quick bite to eat between classes. It is a
+                    vibrant hub of activity where students come together to share a meal, catch up with friends, and
+                    recharge their batteries for the rest of the day.Students who have a busy schedule and do not have
+                    the time to go to different places to buy their stationery and food. Our canteen provide a unique
+                    service to students and make a significant contribution to the educational community.The aroma of
+                    delicious food wafts through the air, tempting even the most studious of students to take a break
+                    and indulge in some culinary delights.
+                </p>
+            </div>
+            <div class="about-img">
+                <img src="./resources/canteen image.jpg" alt="food" />
+            </div>
+        </div>
+    </section>
+    <section id="food">
+
+        <h2><u>Types of Services</h2>
+ 
+        <div class="slideshow-container">
+            
+            <div class="food-type grin mySlides">
+                <div class="img-container">
+                    <img width="1000" src="./resources/maincourse.jpg" alt="error" />
+                    <div class="img-content">
+
+                        <a href="#Maincourse" class="btn btn-primary" target="blank">Main Course</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="food-type vegetable mySlides">
+                <div class="img-container">
+                    <img src="./resources/beverages.jpg" alt="error" />
+                    <div class="img-content">
+
+                        <a href="#Beverages" class="btn btn-primary" target="blank">Beverages</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type vegetable mySlides">
+                <div class="img-container">
+                    <img src="./resources/icecreame.jpg" alt="error" />
+                    <div class="img-content">
+                        <a href="#IceCream" class="btn btn-primary" target="blank">Ice Cream</a>
+                    </div>
+                </div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+       </div>
+    </section>
+
+    <div id=Maincourse>
+        <section id="food-menu">
+
+            <h2 class="food-menu-heading"><u>Main Course</h2>
+
+            <div class="food-menu-container container">
+                <div class="food-menu-item">
+
+                    <img src="./resources/sandwich.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Chicken Sandwich</h2>
+                        <p class="food-price">Price: &#8377; 40</p>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="food-menu-item">
+
+                    <img src="./resources/vegsand.jpeg" alt="error" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Veg Sandwich</h2>
+
+                        <p class="food-price">Price: &#8377; 30</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/chow.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Chowmien-Chilli Chicken</h2>
+
+                        <p class="food-price">Price: &#8377; 55</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/fried.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Fried Rice-Chilli Chicken</h2>
+
+                        <p class="food-price">Price: &#8377; 55</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/chic65.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Chicken 65</h2>
+
+                        <p class="food-price">Price: &#8377; 55</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/biryani.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Biryani</h2>
+
+                        <p class="food-price">Price: &#8377; 120</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <div id="Beverages">
+        <section id="food-menu">
+
+            <h2 class="food-menu-heading"><u>Beverages</h2>
+
+            <div class="food-menu-container container">
+                <div class="food-menu-item">
+
+                    <img src="./resources/tea.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Tea</h2>
+
+                        <p class="food-price">Price: &#8377; 10</p>
+                        <hr>
+                    </div>
+                </div>
+
+                <div class="food-menu-item">
+
+                    <img src="./resources/coffee.jpeg" alt="error" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Coffee</h2>
+
+                        <p class="food-price">Price: &#8377; 10</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/chocolates.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Chocolates</h2>
+
+                        <p class="food-price">Price: &#8377; 10/20/50</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/cakes.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Cakes</h2>
+
+                        <p class="food-price">Price: &#8377; 10</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/drinks.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Drinks</h2>
+
+                        <p class="food-price">Price: &#8377; 25</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/cup.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Instant Noodles</h2>
+
+                        <p class="food-price">Price: &#8377; 55</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+
+                
+            </div>
+        </section>
+    </div>
+    <div id="IceCreame">
+        <section id="food-menu">
+
+            <h2 class="food-menu-heading"><u>Ice Cream</h2>
+
+            <div class="food-menu-container container">
+                <div class="food-menu-item">
+
+                    <img src="./resources/junior.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Junior Choco Bar</h2>
+
+                        <p class="food-price">Price: &#8377; 10</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/feast.jpeg" alt="error" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Feast Chocolate</h2>
+
+                        <p class="food-price">Price: &#8377; 35</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/forest.jpeg" alt="error" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Feast Black Forest</h2>
+
+                        <p class="food-price">Price: &#8377; 45</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/senior.jpeg" alt="error" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Senior Choco Bar</h2>
+
+                        <p class="food-price">Price: &#8377; 20</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/cola.jpeg" alt="error" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Cola Blast</h2>
+
+                        <p class="food-price">Price: &#8377; 10</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/crunchy.jpeg" alt="error" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Cruncy Chocolate</h2>
+
+                        <p class="food-price">Price: &#8377; 25</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/butter.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Crunchy Butter Scotch</h2>
+
+                        <p class="food-price">Price: &#8377; 25</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/vanilla.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Choco Vanilla</h2>
+
+                        <p class="food-price">Price: &#8377; 35</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/double.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile">Double Chocolate</h2>
+
+                        <p class="food-price">Price: &#8377; 40</p>
+                        <hr>
+                    </div>
+                </div>
+                <div class="food-menu-item">
+
+                    <img src="./resources/caramel.jpeg" alt="" />
+
+                    <div class="food-description">
+                        <h2 class="food-titile" id="salted">Salted Caramel Brownie</h2>
+
+                        <p class="food-price">Price: &#8377; 10</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="cart">
+        <a href="./cart.html" class="btn btn-primary" id="button" style=" font-size: x-large; font-weight: 600;">Order Online</a>
+    </div><br><br>
+
+    
+        <div class="location-contact">
+            <form onsubmit="return validateForm()" action=" " method="POST">
+                <input type=" text" class="name1" placeholder="Your Name" id="name" name="name" required>
+                <p id="errormsg1" class="errormsg"></p>
+                <input type="tel" class="number" placeholder="Your Number" id="phone" name="phone" required>
+                <p id="errormsg3" class="errormsg"></p>
+                <input type="email erroe3" class="email" placeholder="Your email" id="email" required>
+                <p id="errormsg2" class="errormsg" required></p>
+                <textarea class="doubt" rows="5" placeholder="Ask any question"></textarea>
+                <button class="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <!-- Scroll back Button -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class='fas fa-arrow-circle-up'
+            style='font-size:36px'></i></button>
+    <!-- End of scroll back btton -->
+    <footer id="footer">
+        <div class="footer-container container">
+
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#food">Services</a></li>
+                        <li><a href="#food-menu">Menu</a></li>
+                        <li><a href="button">Order</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+
+                    <ul class="social-icons">
+                        <li><a class="facebook" href="https://www.facebook.com/psnacetofficial/"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="https://x.com/psnacetofficial?lang=en"><i class="fa fa-twitter"></i></a></li>
+
+                        <li><a class="linkedin" href="https://in.linkedin.com/company/psna-college-of-engineering-and-technology"><i class="fa fa-linkedin"></i></a></li>
+                        <div class="footer-logo">
+                            <img src="logo-wide.jpg" alt="College Logo"
+                                width="120" height="100">
+                        </div>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h2>PSNACET &copy; all rights reserved</h2>
+        </div>
+    </footer>
+
+    <!-- .................../ JS Code for smooth scrolling /...................... -->
+    <script src="Scrollback.js"></script>
+    <script src="FormValidation.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="Carousel.js"></script>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+
+</html>
+
+</body>
+
+</html>

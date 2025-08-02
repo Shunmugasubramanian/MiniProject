@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h2>Processing your payment...</h2>
+
+  <script>
+    const totalAmount = parseInt(localStorage.getItem("totalPrice") || "0");
+    console.log("Sending total amount to backend:", totalAmount);
+    const cartItems = JSON.parse(localStorage.getItem("cartItems") || "[]");
+
+    if (!totalAmount || totalAmount <= 0 || cartItems.length === 0) {
+      alert("❌ Cart is empty or amount is invalid.");
+      window.location.href = "cart.html";
+    } else {
+      initiatePayment(totalAmount);
+    }
+
+    async function initiatePayment(amount) {
+      try {
+
+        const amountInPaise = Math.round(amount);
+
+        const response = await fetch("http://localhost:5000/create-order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ amount: amountInPaise })
+        });
+
+        const order = await response.json();
+
+        console.log("🧾 Received order object from backend:", order);
+        console.log("Amount from server (paise):", order.amount);
+
+        const options = {
+          key: "rzp_test_oYQWv1Kl113ge4",
+          amount: order.amount,
+          currency: "INR",
+          name: "Canteen Order",
+          description: "Food Purchase",
+          order_id: order.id,
+          handler: async function (response) {
+            alert("✅ Payment successful!\nPayment ID: " + response.razorpay_payment_id);
+
+            const username = localStorage.getItem("username") || "Guest";
+
+            const orderData = {
+              username: username,
+              paymentId: response.razorpay_payment_id,
+              orderId: response.razorpay_order_id,
+              signature: response.razorpay_signature,
+              totalAmount: amount,
+              cartItems: cartItems,
+              date: new Date().toISOString(),
+              status: "Pending"
+            };
+
+            try {
+              await fetch("http://localhost:5000/save-order", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(orderData),
+              });
+
+              localStorage.setItem("lastRazorpayOrderId", response.razorpay_order_id);
+
+              window.location.href = "success.html";
+            } catch (error) {
+              console.error("Save order error:", error);
+              alert("Payment successful, but saving order failed.");
+              window.location.href = "success.html";
+            }
+          },
+          prefill: {
+            name: "User",
+            email: "user@example.com",
+            contact: "9123456780",
+          },
+          theme: {
+            color: "#0d6efd",
+          },
+          method: {
+            upi: true,
+            card: true,
+            netbanking: true,
+            wallet: true,
+          }  
+        };
+
+        const rzp = new Razorpay(options);
+        rzp.open();
+      } catch (err) {
+        console.error("Error creating order:", err);
+        alert("Error initiating payment.");
+      }
+    }
+  </script>
+</body>
+</html>
